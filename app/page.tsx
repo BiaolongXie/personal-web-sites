@@ -1,33 +1,26 @@
-// 这里不需要 "use client" 了！它现在是 Server Component，对 SEO 极好。
-import { MyDock } from "@/components/business/MyDock";
 import Hero from "@/components/business/Hero";
-import LanguageSwitch from "@/components/business/LanguageSwitch";
 import Footer from "@/components/business/Footer";
-import { Mainlogo } from "@/components/business/Logo";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-zinc-950">
-      <Hero />
+    // ✅ 修改重点：
+    // 1. 删掉了 items-center 和 justify-center (不再挤压)
+    // 2. 加上了 w-full (强制占满屏幕宽度)
+    // 3. 保留 flex-col (保证从上往下排)
+    // 4. overflow-x-hidden (防止某些动画导致出现横向滚动条)
+    <main className="flex min-h-screen w-full flex-col bg-zinc-950 overflow-x-hidden">
+      
+      {/* 这里的 section 默认就是 block 元素，会自动占满一行 */}
+      <section id="home">
+        <Hero />
+      </section>
 
-      <LanguageSwitch />
+      {/* 如果你有其他内容，放在这里... */}
 
-      <Mainlogo />
-
-      {/* {
-      fixed：表示固定住这个组件，不随着滚动条滚动
-      bottom-10：表示距离底部约40px
-      left-1/2：表示左边缘排到居中位置
-      -translate-x-1/2：把组件拉回自身宽度的一半，实现完美居中
-      } */}
-      {/* <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50">
-        <MyDock />
-      </div> */}
-
-
-
-      <Footer />
-
+      <section id="footer">
+        <Footer />
+      </section>
+      
     </main>
   );
 }

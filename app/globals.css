@@ -18,7 +18,10 @@
 }
 
 @layer base {
-    body {
-      @apply bg-black text-white; /* 必须是纯黑 bg-black */
-    }
+  html {
+    scroll-behavior: smooth; /* 丝滑跳转页面 */
   }
+  body {
+    @apply bg-black text-white; /* 必须是纯黑 bg-black */
+  }
+}

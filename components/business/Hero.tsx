@@ -4,11 +4,21 @@
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { translations } from "@/lib/i18n";
 
+import { cn } from "@/lib/utils";
+
 // 导入 UI 组件
 import { Spotlight } from "@/components/ui/spotlight";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+import Link from "next/link";
+
+const EncryptedText = dynamic(
+  () =>
+    import("@/components/ui/encrypted-text").then((mod) => mod.EncryptedText),
+  { ssr: false } // <--- 关键！关闭服务端渲染
+);
 
 export default function Hero() {
   // 1. 获取当前语言状态
@@ -17,7 +27,7 @@ export default function Hero() {
   const t = translations[language].hero;
 
   return (
-    <div className="h-screen w-full flex md:items-center md:justify-center antialiased bg-grid-white/[0.02] relative overflow-hidden ">
+    <div className="h-screen w-full flex md:items-center md:justify-center bg-grid-white/[0.02] antialiased relative overflow-hidden ">
       {/* 1. 聚光灯效果：从左上角打入白光 */}
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -43,8 +53,9 @@ export default function Hero() {
                 className="text-2xl font-bold text-neutral-600 dark:text-white hover:text-white hover:scale-105 transition-all origin-left"
               >
                 {t.greeting} {/* 名字换行显示，更有冲击力 */}
-                <div className="text-4xl md:text-5xl text-blue-500 mt-2">
-                  {t.name}
+                {/* 打字机效果 */}
+                <div className="mx-auto flex max-w-lg items-center justify-center text-4xl md:text-5xl text-blue-500 mt-2">
+                  <EncryptedText text={t.name} />
                 </div>
               </CardItem>
 
@@ -103,7 +114,7 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover/avatar:opacity-100 transition-opacity rounded-full"></div>
                   <div className="relative w-[90%] h-[90%] rounded-full overflow-hidden border border-white/10">
                     <Image
-                      src="/avatar.png"
+                      src="/avatar1.png"
                       alt="DevStudent Avatar"
                       fill
                       className="object-cover"
@@ -117,7 +128,8 @@ export default function Hero() {
               {/* ✅ 关键修改 2: 删掉了外层多余的 div，直接把 CardItem 放在 flex-col 里 */}
               <CardItem
                 translateZ="60"
-                as="button"
+                as={Link}
+                href="#about"
                 // ✅ 修正提示: hover:scale-120 可能无效(因为Tailwind默认只有110/125)，改成了 scale-110 或 arbitary value
                 className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-bold hover:bg-white/20 hover:scale-125 transition-all shadow-lg "
               >
@@ -128,8 +140,7 @@ export default function Hero() {
         </CardBody>
       </CardContainer>
 
-      {/* 3. 底部遮罩（让底部Dock区域和背景融合得更好，可选） */}
-      <div className="absolute pointer-events-none inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+
     </div>
   );
 }
