@@ -15,7 +15,25 @@ export default function Home() {
         <Hero />
       </section>
 
-      {/* 如果你有其他内容，放在这里... */}
+      <section id="about">
+        
+      </section>
+
+      <section id="tech">
+        
+      </section>
+
+      <section id="hobby">
+        
+      </section>
+
+      <section id="project">
+        
+      </section>
+
+      <section id="game">
+        
+      </section>
 
       <section id="footer">
         <Footer />

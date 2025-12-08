@@ -24,4 +24,16 @@
   body {
     @apply bg-black text-white; /* 必须是纯黑 bg-black */
   }
+  * {
+    cursor: none !important; /* 强制不显示原有光标 */
+  }
+  /* 或者是稍微温和一点的版本，防止某些特殊情况无法选中文字 */
+  /* body, a, button, input, textarea, select, [role="button"] {
+    cursor: none !important;
+  } 
+  */
 }
+
+
+
+
