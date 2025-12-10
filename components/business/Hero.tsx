@@ -37,7 +37,7 @@ export default function Hero() {
       {/* 2. 内容区域 */}
       {/* 3D 介绍卡 */}
       <CardContainer className="inter-var">
-        <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto rounded-xl p-8 border">
+        <CardBody className="bg-gray-50 relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] bg-black border-white/[0.2] border-black/[0.1] w-auto sm:w-[38rem] h-auto rounded-xl p-8 border">
           {/* ✅ 修改点2：主容器改为 flex-row (水平排列)，并用 justify-between 拉开间距 */}
           <div
             className="mt-2 flex flex-col-reverse md:flex-row items-center justify-center gap-12 md:gap-20"
@@ -50,7 +50,7 @@ export default function Hero() {
             >
               <CardItem
                 translateZ="80"
-                className="text-2xl font-bold text-neutral-600 dark:text-white hover:text-white hover:scale-105 transition-all origin-left"
+                className="text-2xl font-bold text-neutral-600 text-white hover:text-white hover:scale-105 transition-all origin-left"
               >
                 {t.greeting} {/* 名字换行显示，更有冲击力 */}
                 {/* 打字机效果 */}
@@ -61,7 +61,7 @@ export default function Hero() {
 
               <CardItem
                 translateZ="60"
-                className="text-neutral-500 text-lg md:text-xl max-w-sm dark:text-neutral-300 mb-4 hover:text-white hover:scale-105 transition-all origin-left"
+                className="text-neutral-500 text-lg md:text-xl max-w-sm text-neutral-300 mb-4 hover:text-white hover:scale-105 transition-all origin-left"
               >
                 {t.introduce}
               </CardItem>
@@ -91,7 +91,7 @@ export default function Hero() {
 
               <CardItem
                 translateZ="60"
-                className="text-neutral-500 text-xl max-w-sm dark:text-neutral-300 hover:text-white hover:scale-105 transition-all origin-left mt-6 italic"
+                className="text-neutral-500 text-xl max-w-sm text-neutral-300 hover:text-white hover:scale-105 transition-all origin-left mt-6 italic"
               >
                 “{t.motto}”
               </CardItem>

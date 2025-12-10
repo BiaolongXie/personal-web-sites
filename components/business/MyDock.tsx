@@ -38,27 +38,27 @@ export function Dock() {
   const links = [
     {
       title: "Home",
-      icon: <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconHome className="h-full w-full text-neutral-500 text-neutral-300" />,
       href: "#home",
     },
     {
       title: "About",
-      icon: <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconUser className="h-full w-full text-neutral-500 text-neutral-300" />,
       href: "#about",
     },
     {
       title: "Projects",
-      icon: <IconFolder className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconFolder className="h-full w-full text-neutral-500 text-neutral-300" />,
       href: "#projects",
     },
     {
       title: "Tech Stack",
-      icon: <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconTerminal2 className="h-full w-full text-neutral-500 text-neutral-300" />,
       href: "#skills",
     },
     {
       title: "GitHub",
-      icon: <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />,
+      icon: <IconBrandGithub className="h-full w-full text-neutral-500 text-neutral-300" />,
       href: "https://github.com/你的用户名",
       target: "_blank",
     },
