@@ -4,7 +4,7 @@ import "./globals.css";
 import { Dock } from "@/components/business/MyDock";
 import LanguageSwitch from "@/components/business/LanguageSwitch";
 import { Mainlogo } from "@/components/business/Logo";
-import { Cursor } from "@/components/ui/cursor";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +36,6 @@ export default function RootLayout({
         <LanguageSwitch />
         <Dock />
         <Mainlogo />
-        <Cursor />
       </body>
     </html>
   );

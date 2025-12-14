@@ -1,5 +1,6 @@
 import Hero from "@/components/business/Hero";
 import Footer from "@/components/business/Footer";
+import AboutPage from "@/components/business/AboutPage"
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       </section>
 
       <section id="about">
-        
+        <AboutPage />
       </section>
 
       <section id="tech">

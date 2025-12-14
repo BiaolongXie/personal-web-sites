@@ -114,7 +114,7 @@ export default function Hero() {
                   <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/20 to-purple-500/20 opacity-0 group-hover/avatar:opacity-100 transition-opacity rounded-full"></div>
                   <div className="relative w-[90%] h-[90%] rounded-full overflow-hidden border border-white/10">
                     <Image
-                      src="/avatar1.png"
+                      src="/image/avatar/avatar2.png"
                       alt="DevStudent Avatar"
                       fill
                       className="object-cover"
@@ -139,8 +139,6 @@ export default function Hero() {
           </div>
         </CardBody>
       </CardContainer>
-
-
     </div>
   );
 }
