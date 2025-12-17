@@ -12,8 +12,8 @@ const currentSong = {
   coverUrl: "/image/music/album-cover.png",
   audioSrc: "/image/music/audio/test2.mp3",
   // 新增素材路径
-  vinylTexture: "/image/music/vinyl-texture4.png",
-  tonearmImage: "/image/music/tonearm2.png",
+  vinylTexture: "/image/music/vinyl-texture.png",
+  tonearmImage: "/image/music/tonearm.png",
 };
 
 export const NeteaseVinyl = () => {
