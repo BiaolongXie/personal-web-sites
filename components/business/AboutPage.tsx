@@ -3,7 +3,7 @@
 // 导入语言工具
 import { useLanguageStore } from "@/store/useLanguageStore";
 import { translations } from "@/lib/i18n";
-import { NeteaseVinyl } from "@/components/ui/vinyl-player";
+import { RecordPlayer } from "@/components/ui/record-player";
 
 export default function AboutPage() {
   // 1. 获取当前语言状态
@@ -13,7 +13,8 @@ export default function AboutPage() {
 
   return (
     <div className=" ">
-      <NeteaseVinyl />
+      {/* <NeteaseVinyl /> */}
+      <RecordPlayer />
     </div>
   );
 }

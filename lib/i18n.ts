@@ -21,7 +21,12 @@ export const translations = {
       },
       footer:{
         description: "Love learning, enjoy sharing, and enjoy creating",
-      }
+      },
+      aboutMusic:{
+        title: "Music",
+        exit: "EJECT",
+        remind: "DRAG RECORD HERE"
+      },
     },
     zh: {
       hero: {
@@ -42,7 +47,12 @@ export const translations = {
       },
       footer:{
         description: "热爱学习，喜欢分享，享受创造"
-      }
+      },
+      aboutMusic:{
+        title: "音乐",
+        exit: "弹出",
+        remind: "唱片拖放到此处"
+      },
     }
   };
   
