@@ -245,7 +245,7 @@ export const RecordPlayer = () => {
   const songColumns = chunkArray(PLAYLIST.slice(0, 12), 4);
 
   return (
-    <div className="w-full max-w-full overflow-x-hidden mx-auto py-12 px-4 select-none relative z-10">
+    <div className="w-full max-w-full overflow-x-hidden mx-auto py-12 px-4 select-none relative z-10 h-screen">
       <audio
         ref={audioRef}
         src={activeSong?.audioSrc}
